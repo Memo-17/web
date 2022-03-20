@@ -1,0 +1,154 @@
+/* Home page styles */
+
+:root {
+  --color-primary: #458ff6;
+  --color-primary-hover: #458ff6e0;
+}
+
+.section {
+  padding-block: 3rem;
+  overflow-x: hidden;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.hero__image {
+  margin-inline: auto;
+  max-width: 440px;
+}
+
+.hero__image img {
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-card {
+  width: 90%;
+  max-width: 440px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(25, 37, 66, 0.1);
+  border-radius: 20px;
+  transform: translateX(400%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.service-card:nth-child(even) {
+  transform: translateX(-400%);
+}
+
+.service-card.show {
+  transform: translateX(0);
+}
+
+.service-card h3 {
+  margin-block: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.service-card > small {
+  display: block;
+  font-size: 0.8rem;
+  color: #8e959f;
+  margin-block: 1rem;
+}
+
+.small {
+  margin-block-end: 12px;
+  font-style: italic;
+}
+
+.cardImg {
+  margin-block-end: 1.5rem;
+  max-width: 60%;
+  flex: 2;
+}
+
+.cardImg img {
+  width: 100%;
+}
+
+.button {
+  font-family: inherit;
+  border-radius: 25px;
+  padding-block: 0.75rem;
+  padding-inline: 2rem;
+  border: 0;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.center-quote {
+  padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  height: 70vh;
+}
+
+.panel {
+  height: 100%;
+  flex: 0.5;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  transition: flex 0.5s ease-in-out;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel h3 {
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out 0.4s;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}

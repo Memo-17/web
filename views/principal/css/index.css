@@ -1,0 +1,9 @@
+li {
+  cursor: pointer;
+}
+
+.actions {
+  width: 150px;
+  display: flex;
+  gap: 0.5rem;
+}

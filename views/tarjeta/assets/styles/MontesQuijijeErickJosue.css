@@ -1,0 +1,66 @@
+.Targeta{
+    border-collapse:separate;
+    border-radius:10px;
+    border-color: rgba(98,180,242,255);
+    background: rgba(98,180,242,255);
+    float: left;
+    width: 30.1%;
+    margin: 1.6%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 7px 7px 15px rgba(69, 143, 246, 0.5);
+    
+}
+
+.centrar{
+    text-align:center;
+}
+
+.centrar_Titulo_Targeta{
+    text-align:center;
+    margin-top: 50px;
+}
+
+.precio{
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+    flex: 4;
+    justify-content: center;
+}
+
+.button{
+    font-size: 15px;
+    font-weight:bold;
+    text-align:center;
+    border-collapse:separate;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 5px; 
+    border-color: white;
+    background: white;
+    float:left;
+    height: 30px;
+    width: 80%;
+    margin: 10%;
+    color: rgba(98,180,242,255);
+    cursor: pointer;
+}
+
+.text_p{
+    color: black;
+    font-size: 20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.planes-contendor {
+    display: flex;
+    gap: 1;
+    flex-wrap: wrap;
+}
+
+.viñetas_descripcion{
+    font-size: 22px;
+}

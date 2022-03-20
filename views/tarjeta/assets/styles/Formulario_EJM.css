@@ -1,0 +1,294 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/*background: #ddeefc;*/
+	font-family: 'Lato', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Estilos de la targeta */
+
+.tarjeta {
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	color: white;
+	transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.tarjeta.active{
+    transform: rotateY(180deg);
+}
+
+.tarjeta > div{
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px rgba(90,116,148,0.3);
+}
+
+/* Tarjeta delantera*/
+
+.tarjeta .delantera{
+    width: 100%;
+    background: url(../images/bg-tarjeta/bg-tarjeta-01.jpg);
+    background-size: cover;
+}
+
+.delantera .logo-marca{
+    text-align: right;
+    min-height: 50px;
+}
+
+.delantera .logo-marca img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+}
+
+.delantera .chip_tarjeta{
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.delantera .label{
+    font-size: 16px;
+    color:lightslategrey;
+    margin-bottom: 5px;
+}
+
+.delantera .numero,
+.delantera .nombre
+.delantera .expiracion{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.delantera .flexbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Tarjeta trasera */
+
+.trasera {
+    width: 100%;
+    background: url(../images/bg-tarjeta/bg-tarjeta-01.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility:hidden;
+}
+
+.trasera .barra_magnetica{
+    height: 40px;
+    background: gray;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.trasera .datos{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trasera .datos p{
+    margin-bottom: 5px;
+}
+
+.trasera .datos #firma{
+    width: 70%;
+}
+
+.trasera .datos #firma .firma{
+    height: 40px;
+    background: repeating-radial-gradient(blue 0,lightslategrey 5px, lightslategrey 5px,blue 10px);
+}
+
+.trasera .datos #firma .firma p{
+    line-height: 40px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    color: white;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.trasera .datos #ccv{
+    width: 20%;
+}
+
+.trasera .datos #ccv .ccv{
+    background: white;
+    height: 40px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Boton */
+
+.contenedor_btn .btn_abrir_formulario{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: rgb(98,180,242);
+    color: white;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(69, 143, 246, 0.5);
+    padding: 5px;
+    transition: all.2s ease;
+    border: none;
+    cursor: pointer;
+    ;
+}
+
+.contenedor_btn .btn_abrir_formulario:hover{
+    background: rgb(89, 162, 218);
+}
+
+.contenedor_btn .btn_abrir_formulario.active{
+    transform: rotate(45deg);
+}
+
+/*Formulario*/
+
+.formulario_tarjeta{
+    background: rgba(98,180,242,0.4);
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+
+.formulario_tarjeta.active{ 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario_tarjeta.editar{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    top: 0px;
+}
+
+.formulario_tarjeta label{
+    display: block;
+    color: gray;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.formulario_tarjeta input,
+.formulario_tarjeta select,
+.btn_enviar{
+    border: 2px solid white;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+}
+
+.formulario_tarjeta input:hover,
+.formulario_tarjeta select:hover{
+    border: 2px solid rgb(98,180,242);
+}
+
+.formulario_tarjeta input:focus,
+.formulario_tarjeta select:focus{
+    outline: red;
+    box-shadow: 1px 7px 10px -5px rgba(128, 128, 128,0.5);
+}
+
+.formulario_tarjeta input{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.formulario_tarjeta .flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario_tarjeta .expira{
+    width: 100%;
+}
+
+.formulario_tarjeta .ccv{
+    min-width: 100px;
+}
+
+.formulario_tarjeta .grupo_select{
+    width: 100%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.formulario_tarjeta select{
+    -webkit-appearance: none;
+}
+
+.formulario_tarjeta .grupo_select i{
+    position: absolute;
+    color: gray;
+    top: 18px;
+    right: 15px;
+    transition: .3s ease all;
+}
+
+.formulario_tarjeta .grupo_select:hover i{
+    color: rgb(63, 63, 63);
+}
+
+.formulario_tarjeta .btn_enviar{
+    border: none;
+    padding: 10px;
+    font-size: 22px;
+    color: white;
+    background: rgb(98,180,242);
+    box-shadow: 2px 2px 10px 0px rgba(69, 143, 246, 0.4);
+    cursor: pointer;
+}
+
+.formulario_tarjeta .btn_enviar:hover{
+    background: rgb(89, 162, 218)
+}
+
+

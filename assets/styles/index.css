@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  min-height: 100vh;
+}
+
+/* button login*/
+
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.370rem 0.70rem;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin:0;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+/* Layout */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Wrapper for general page margin */
+
+.page-wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+/* Header page section */
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer page section */
+.footer {
+  background: url("../images/ui/footer-dots.svg"),
+    url("../images/ui/footer-dots.svg"),
+    linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 100%, 100% 0;
+}
+
+.footer__container {
+  padding-block: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.footer__company-info {
+  flex: 2;
+}
+
+.footer__links-container {
+  flex: 3;
+  display: flex;
+  gap: 3rem;
+}
+
+.footer__column-title {
+  display: block;
+  font-weight: 700;
+  margin-block-end: 1rem;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.footer__column-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.footer__text {
+  color: #fff;
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.session-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0069d9;
+}

@@ -1,0 +1,35 @@
+.centrado{
+    margin: 1%;
+    width: 31%;
+    height: 300px;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 125%;
+    text-align: center;
+}
+
+.modalContenedor{
+    width: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left:15%;
+}
+
+.modal-formato{
+    width: 146%;
+    height: 650px;
+}
+
+.modal{
+    padding: 30px 50px;
+}
+.mostrar{
+    display:inline-block;
+    pointer-events: auto;
+}
